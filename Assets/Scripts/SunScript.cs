@@ -23,10 +23,10 @@ public class SunScript : MonoBehaviour
 	// Detect Sun hit and update SunHealth
 	void OnCollisionEnter(Collision collision) 
 	{ 
-  		if(collision.gameObject.tag=="Player")
+  		if(collision.gameObject.tag=="Enemy")
 		{ 
 			SunHealth -= 10;
-     		Debug.Log("hit"); 
+     		Debug.Log("hit" + SunHealth); 
    		} 
 	
 	}
