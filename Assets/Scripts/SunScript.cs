@@ -29,5 +29,6 @@ public class SunScript : MonoBehaviour
      		Debug.Log("hit" + SunHealth); 
    		} 
 	
+		//klashddgfjha
 	}
 }
