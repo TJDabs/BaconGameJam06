@@ -35,7 +35,7 @@ public class EnemyScript : MonoBehaviour {
 		transform.Translate(Vector3.left * Time.deltaTime * speed);
 		
 		//Timers
-		if(timerDOT >= 0)
+		if(timerDOT > 0)
 		{
 			timerDOT -= Time.deltaTime;
 			health -= 0.001f;

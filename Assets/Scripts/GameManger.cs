@@ -8,7 +8,7 @@ public class GameManger : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		Power = "Purple";
+		//Power = "Purple";
 	
 	}
 	
