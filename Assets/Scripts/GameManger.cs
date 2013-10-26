@@ -24,7 +24,8 @@ public class GameManger : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		
 		if(redOnCooldown == true && redTimer >= 0)
 		{
@@ -71,6 +72,29 @@ public class GameManger : MonoBehaviour {
 			purpleOnCooldown = false;
 		}
 	
+		
+		
+		//Keyboard controls
+		if (Input.GetKeyDown(KeyCode.Q) == true)
+		{
+			Power = "Red";
+		}
+		else if (Input.GetKeyDown(KeyCode.W) == true)
+		{
+			Power = "Yellow";
+		}
+		else if (Input.GetKeyDown(KeyCode.E) == true)
+		{
+			Power = "Green";
+		}
+		else if (Input.GetKeyDown(KeyCode.R) == true)
+		{
+			Power = "Blue";
+		}
+		else if (Input.GetKeyDown(KeyCode.T) == true)
+		{
+			Power = "Purple";
+		}
 	}
 	
 	public void setTimer(string color)

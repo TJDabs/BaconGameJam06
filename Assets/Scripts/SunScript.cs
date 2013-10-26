@@ -19,7 +19,7 @@ public class SunScript : MonoBehaviour
 	{
 		if(SunHealth <= 0)
 		{
-				
+			//Application.loadedLevel("EndGame");		
 		}
     }
 	
@@ -29,8 +29,7 @@ public class SunScript : MonoBehaviour
   		if(collision.gameObject.tag=="Enemy")
 		{ 
 			Destroy(collision.gameObject);
-			SunHealth -= 1;
-     		Application.loadedLevel("EndGame")
+			SunHealth -= 1;	
    		} 
 	
 	}
