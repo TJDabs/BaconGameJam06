@@ -13,13 +13,85 @@ public class RainbowScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Color == GameManger.Power)
+		//IF RED
+		if(Color == "Red")
 		{
-			Sprite.SetSprite(Color + "-highlight");
+			if(GameManger.redOnCooldown == true)
+			{
+				Sprite.SetSprite("Red-cooldown");
+			}
+			else if(Color == GameManger.Power)
+			{
+				Sprite.SetSprite(Color + "-highlight");
+			}
+			else
+			{
+				Sprite.SetSprite(Color);
+			}
 		}
-		else
+		//YELLOW
+		if(Color == "Yellow")
 		{
-			Sprite.SetSprite(Color);
+			if(GameManger.yellowOnCooldown == true)
+			{
+				Sprite.SetSprite("Yellow-cooldown");
+			}
+			else if(Color == GameManger.Power)
+			{
+				Sprite.SetSprite(Color + "-highlight");
+			}
+			else
+			{
+				Sprite.SetSprite(Color);
+			}
+		}
+		//GREEN
+		if(Color == "Green")
+		{
+			if(GameManger.greenOnCooldown == true)
+			{
+				Sprite.SetSprite("Green-cooldown");
+			}
+			else if(Color == GameManger.Power)
+			{
+				Sprite.SetSprite(Color + "-highlight");
+			}
+			else
+			{
+				Sprite.SetSprite(Color);
+			}
+		}
+		//BLUE
+		if(Color == "Blue")
+		{
+			if(GameManger.blueOnCooldown == true)
+			{
+				Sprite.SetSprite("Blue-cooldown");
+			}
+			else if(Color == GameManger.Power)
+			{
+				Sprite.SetSprite(Color + "-highlight");
+			}
+			else
+			{
+				Sprite.SetSprite(Color);
+			}
+		}
+		//PURPLE
+		if(Color == "Purple")
+		{
+			if(GameManger.purpleOnCooldown == true)
+			{
+				Sprite.SetSprite("Purple-cooldown");
+			}
+			else if(Color == GameManger.Power)
+			{
+				Sprite.SetSprite(Color + "-highlight");
+			}
+			else
+			{
+				Sprite.SetSprite(Color);
+			}
 		}
 	
 	}

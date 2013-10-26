@@ -7,6 +7,9 @@ public class EnemyScript : MonoBehaviour {
 	private bool Clicked = false;
 	private int speed;
 	
+	public GameManger gameScript;
+	public Transform AOECollider;
+	
 	private float timerDOT = 0;
 	private float timerSlow = 0;
 	
@@ -18,7 +21,7 @@ public class EnemyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(health);
+		//Debug.Log(health);
 		//Do purple Power
 		if(Clicked == true && GameManger.Power == "Purple")
 		{
@@ -48,7 +51,7 @@ public class EnemyScript : MonoBehaviour {
 		}
 		else
 		{
-			speed = 5;
+			speed = 2;
 		}
 	}
 	
@@ -58,19 +61,37 @@ public class EnemyScript : MonoBehaviour {
 
 		if(GameManger.Power == "Yellow") //Yellow Power
 		{
-			health -= 5f;
+			if(GameManger.yellowOnCooldown == false)
+			{
+				health -= 5f;
+				gameScript.setTimer("Yellow");
+			}
 		}
 		else if(GameManger.Power == "Red") //Red Power
 		{
-			timerDOT = 10;
+			if(GameManger.redOnCooldown == false)
+			{
+				timerDOT = 10;
+				gameScript.setTimer("Red");
+			}
 		}
 		else if(GameManger.Power == "Green") //Green Power
 		{
-			
+			if(GameManger.greenOnCooldown == false)
+			{
+				Vector3 mousepos = Input.mousePosition;
+				Vector3 objectPos = Camera.main.ScreenToWorldPoint(mousepos);
+				Instantiate(AOECollider, objectPos, Quaternion.Euler(-90,0,0));
+				gameScript.setTimer("Green");
+			}
 		}
 		else if(GameManger.Power == "Blue") //Blue Power
 		{
-			timerSlow = 5;
+			if(GameManger.blueOnCooldown == false)
+			{
+				timerSlow = 5;
+				gameScript.setTimer("Blue");
+			}
 		}
 	}
 	
@@ -83,5 +104,14 @@ public class EnemyScript : MonoBehaviour {
 	void die()
 	{
 		Destroy(gameObject);
+	}
+	
+	void OnTriggerEnter(Collider collision)
+	{
+		if(collision.tag == "AOE")
+		{
+			health -= 3;
+			Debug.Log("Hit AOE");
+		}
 	}
 }

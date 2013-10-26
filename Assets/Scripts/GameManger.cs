@@ -5,6 +5,17 @@ public class GameManger : MonoBehaviour {
 	
 	public static string Power;
 	
+	public static bool redOnCooldown;
+	private float redTimer;
+	public static bool yellowOnCooldown;
+	private float yellowTimer;
+	public static bool greenOnCooldown;
+	private float greenTimer;
+	public static bool blueOnCooldown;
+	private float blueTimer;
+	public static bool purpleOnCooldown;
+	private float purpleTimer;
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -14,6 +25,95 @@ public class GameManger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+		if(redOnCooldown == true && redTimer >= 0)
+		{
+			redTimer -= Time.deltaTime;
+		}
+		else
+		{
+			redOnCooldown = false;
+		}
+		
+		if(yellowOnCooldown == true && yellowTimer >= 0)
+		{
+			yellowTimer -= Time.deltaTime;
+		}
+		else
+		{
+			yellowOnCooldown = false;
+		}
+		
+		if(greenOnCooldown == true && greenTimer >= 0)
+		{
+			greenTimer -= Time.deltaTime;
+		}
+		else
+		{
+			greenOnCooldown = false;
+		}
+		
+		if(blueOnCooldown == true && blueTimer >= 0)
+		{
+			blueTimer -= Time.deltaTime;
+		}
+		else
+		{
+			blueOnCooldown = false;
+		}
+		
+		if(purpleOnCooldown == true && purpleTimer >= 0)
+		{
+			purpleTimer -= Time.deltaTime;
+		}
+		else
+		{
+			purpleOnCooldown = false;
+		}
 	
+	}
+	
+	public void setTimer(string color)
+	{
+		if(color == "Red")
+		{
+			if(redOnCooldown == false)
+			{
+				redOnCooldown = true;
+				redTimer = 3;
+			}
+		}
+		else if(color == "Yellow")
+		{
+			if(yellowOnCooldown == false)
+			{
+				yellowOnCooldown = true;
+				yellowTimer = 3;
+			}
+		}
+		else if(color == "Green")
+		{
+			if(greenOnCooldown == false)
+			{
+				greenOnCooldown = true;
+				greenTimer = 3;
+			}
+		}
+		else if(color == "Blue")
+		{
+			if(blueOnCooldown == false)
+			{
+				blueOnCooldown = true;
+				blueTimer = 3;
+			}
+		}
+		else if(color == "Purple")
+		{
+			if(purpleOnCooldown == false)
+			{
+				purpleOnCooldown = true;
+				purpleTimer = 3;
+			}
+		}
 	}
 }
