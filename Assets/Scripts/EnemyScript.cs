@@ -8,20 +8,21 @@ public class EnemyScript : MonoBehaviour {
 	private int speed;
 	
 	private float timerDOT = 0;
+	private float timerSlow = 0;
 	
 	// Use this for initialization
 	void Start () {
 		health = 10f;
-		speed = 2;
+		speed = 5;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		Debug.Log(health);
 		//Do purple Power
 		if(Clicked == true && GameManger.Power == "Purple")
 		{
-			Debug.Log("True");
+			health -= 0.01f;
 		}
 		
 		//Check if dead
@@ -38,7 +39,16 @@ public class EnemyScript : MonoBehaviour {
 		{
 			timerDOT -= Time.deltaTime;
 			health -= 0.001f;
-			Debug.Log(health);
+		}
+		
+		if(timerSlow > 0)
+		{
+			timerSlow -= Time.deltaTime;
+			speed = 1;
+		}
+		else
+		{
+			speed = 5;
 		}
 	}
 	
@@ -60,7 +70,7 @@ public class EnemyScript : MonoBehaviour {
 		}
 		else if(GameManger.Power == "Blue") //Blue Power
 		{
-			
+			timerSlow = 5;
 		}
 	}
 	

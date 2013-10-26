@@ -1,6 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyScript.cs">
+    <Files>
+      <File FileName="..\CandySorter\Assets\Scripts\MouseDrag.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyScript.cs" Line="69" Column="4" />
+      <File FileName="Assets\Scripts\GameManger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RainbowScript.cs" Line="21" Column="31" />
+      <File FileName="Assets\Scripts\SunScript.cs" Line="24" Column="43" />
+      <File FileName="..\CandySorter\Assets\Scripts\GameManagerScript.cs" Line="75" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
