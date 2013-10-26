@@ -25,7 +25,7 @@ public class SunScript : MonoBehaviour
 	{ 
   		if(collision.gameObject.tag=="Enemy")
 		{ 
-			DestroyObject(Object);
+			Destroy(collision.gameObject);
 			SunHealth -= 10;
      		Debug.Log("hit" + SunHealth); 
    		} 
