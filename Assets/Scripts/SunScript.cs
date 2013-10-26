@@ -10,14 +10,17 @@ public class SunScript : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		SunHealth = 100;
+		SunHealth = 5;
 	}
 	
 	
 	// Update is called once per frame
 	void Update () 
 	{
-
+		if(SunHealth <= 0)
+		{
+				
+		}
     }
 	
 	// Detect Sun hit and update SunHealth
@@ -26,8 +29,8 @@ public class SunScript : MonoBehaviour
   		if(collision.gameObject.tag=="Enemy")
 		{ 
 			Destroy(collision.gameObject);
-			SunHealth -= 10;
-     		Debug.Log("hit" + SunHealth); 
+			SunHealth -= 1;
+     		Application.loadedLevel("EndGame")
    		} 
 	
 	}
