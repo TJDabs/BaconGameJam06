@@ -5,21 +5,33 @@ public class SunScript : MonoBehaviour
 {
 	
 	private int SunHealth;
-	
+	public GameObject sun1;
+	public GameObject sun2;
+	public GameObject sun3;
+	public AudioClip sunHit;
 	
 	// Use this for initialization
 	void Start () 
 	{
-		SunHealth = 5;
+		SunHealth = 3;
 	}
 	
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		if(SunHealth == 2)
+		{
+			Destroy(sun3);
+		}
+		else if(SunHealth == 1)
+		{
+			Destroy(sun2);
+		}
 		if(SunHealth <= 0)
 		{
-			//Application.loadedLevel("EndGame");		
+			Destroy(sun1);
+			Application.LoadLevel("EndGame");		
 		}
     }
 	
@@ -29,6 +41,7 @@ public class SunScript : MonoBehaviour
   		if(collision.gameObject.tag=="Enemy")
 		{ 
 			Destroy(collision.gameObject);
+			audio.PlayOneShot(sunHit);
 			SunHealth -= 1;	
    		} 
 	

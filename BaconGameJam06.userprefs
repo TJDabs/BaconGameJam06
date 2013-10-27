@@ -2,10 +2,16 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SunScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\SunScript.cs" Line="20" Column="21" />
-      <File FileName="Assets\Scripts\RainbowScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameManger.cs" Line="93" Column="4" />
+      <File FileName="..\CandySorter\Assets\Scripts\StartButton.cs" Line="6" Column="1" />
+      <File FileName="Assets\Scripts\PurpleScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnemyScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManger.cs" Line="35" Column="34" />
+      <File FileName="Assets\Scripts\RainbowScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SunScript.cs" Line="14" Column="3" />
+      <File FileName="Assets\Scripts\AOEScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SpawnerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StartBtnScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InstructionsScript.cs" Line="35" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
