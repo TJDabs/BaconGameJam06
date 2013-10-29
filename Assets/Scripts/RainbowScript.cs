@@ -5,6 +5,7 @@ public class RainbowScript : MonoBehaviour {
 	
 	public string Color;
 	public tk2dSprite Sprite;
+	public GameManger gameScript;
 	
 	// Use this for initialization
 	void Start () {
@@ -99,6 +100,7 @@ public class RainbowScript : MonoBehaviour {
 	void OnMouseDown()
 	{
 		GameManger.Power = Color;
+		gameScript.playPing(Color);
 		Debug.Log(GameManger.Power);
 	}
 }
