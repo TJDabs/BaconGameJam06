@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\CandySorter\Assets\Scripts\StartButton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SunScript.cs">
     <Files>
-      <File FileName="..\CandySorter\Assets\Scripts\StartButton.cs" Line="6" Column="1" />
+      <File FileName="Assets\Scripts\SunScript.cs" Line="12" Column="2" />
+      <File FileName="..\CandySorter\Assets\Scripts\StartButton.cs" Line="5" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

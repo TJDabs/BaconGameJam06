@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SunScript : MonoBehaviour 
 {
-	
+	//create by Dustin
 	private int SunHealth;
 	public GameObject sun1;
 	public GameObject sun2;
